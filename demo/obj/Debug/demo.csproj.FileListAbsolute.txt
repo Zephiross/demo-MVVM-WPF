@@ -1,0 +1,8 @@
+C:\Users\Diego\Desktop\demo\bin\Debug\demo.exe.config
+C:\Users\Diego\Desktop\demo\obj\Debug\demo.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Desktop\demo\obj\Debug\MainWindow.g.cs
+C:\Users\Diego\Desktop\demo\obj\Debug\View\Window1.g.cs
+C:\Users\Diego\Desktop\demo\obj\Debug\App.g.cs
+C:\Users\Diego\Desktop\demo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Diego\Desktop\demo\obj\Debug\demo_MarkupCompile.cache
+C:\Users\Diego\Desktop\demo\obj\Debug\demo_MarkupCompile.lref

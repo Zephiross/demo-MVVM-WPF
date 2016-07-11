@@ -1,0 +1,60 @@
+﻿<Window x:Class="demo.View.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demo.View"
+        xmlns:vm="clr-namespace:demo.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:c="http://www.galasoft.ch/mvvmlight"
+        mc:Ignorable="d"
+        Title="Window1" Height="500" Width="500">
+    <Grid>
+        <ItemsControl>
+            <ItemsControl ItemsSource="{Binding Path=LstVM}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas Background="White" Width="500" Height="500"  />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+
+                        <Ellipse  Width="{Binding Path=Width}" Height="{Binding Path=Width}" >
+                            <!--<Ellipse.InputBindings>
+                                <MouseBinding Gesture="LeftClick"
+                            </Ellipse.InputBindings>-->
+                            <Ellipse.InputBindings>
+                                <MouseBinding Gesture="LeftClick" Command="{Binding OnClick1}"/>
+                            </Ellipse.InputBindings>
+                            <Ellipse.Style>
+                                <Style TargetType="{x:Type Ellipse}">
+                                    <Setter Property="Fill" Value="Red"></Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Fill" Value="Green"></Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Ellipse.Style>
+                            <!--<i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseClick">
+                                    <c:EventToCommand Command="{Binding OnClick1}"/>
+                                    
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>-->
+                        </Ellipse>
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemContainerStyle>
+                    <Style>
+                        
+                        <Setter Property="Canvas.Top" Value="{Binding Path=Top}" />
+                        <Setter Property="Canvas.Left" Value="{Binding Path=Left}" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
+        </ItemsControl>
+    </Grid>
+</Window>
