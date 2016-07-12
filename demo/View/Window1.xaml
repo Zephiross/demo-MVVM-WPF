@@ -20,7 +20,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
 
-                        <Ellipse  Width="{Binding Path=Width}" Height="{Binding Path=Width}" >
+                        <Ellipse  Width="{Binding Path=Width}" Height="{Binding Path=Height}" >
                             <!--<Ellipse.InputBindings>
                                 <MouseBinding Gesture="LeftClick"
                             </Ellipse.InputBindings>-->
